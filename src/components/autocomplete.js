@@ -288,7 +288,7 @@ class Autocomplete extends Component {
                                             <span>What place are you looking for?</span>
                                         }
                                         {this.state.inputLanguage === 'el' &&
-                                            <span>Τι ψάχνεις?</span>
+                                            <span>Τι ψάχνεις;</span>
                                         }
                                             <Input
                                                 placeholder=""
