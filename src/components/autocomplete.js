@@ -49,19 +49,25 @@ const elToEn = {
     ';': 'q',
     'ς': 'w',
     'ε': 'e',
+    'έ': 'e',
     'ρ': 'r',
     'τ': 't',
     'υ': 'y',
+    'ύ': 'y',
     'θ': 'u',
     'ι': 'i',
+    'ί': 'i',
     'ο': 'o',
+    'ό': 'o',
     'π': 'p',
     'α': 'a',
+    'ά': 'a',
     'σ': 's',
     'δ': 'd',
     'φ': 'f',
     'γ': 'g',
     'η': 'h',
+    'ή': 'h',
     'ξ': 'j',
     'κ': 'k',
     'λ': 'l',
@@ -69,6 +75,7 @@ const elToEn = {
     'χ': 'x',
     'ψ': 'c',
     'ω': 'v',
+    'ώ': 'v',
     'β': 'b',
     'ν': 'n',
     'μ': 'm'
@@ -93,11 +100,11 @@ class Autocomplete extends Component {
     getDataEn = () => {
 
         // CREATE AND IMPLEMENT SPELLING RULE FOR THE USER'S INPUT
-        let spellingRule = /[ςερτυθιοπασδφγηξκλζχψωβνμ]/;
+        let spellingRule = /[ςεέρτυύθιίοόπαάσδφγηήξκλζχψωώβνμ]/;
         // IF USER'S INPUT IS NOT ENGLISH/LATIN CONVERT IT AND THEN RETRIEVE THE DATA FROM THE DB
         if (spellingRule.test(this.state.userInput)) {
             let userInputConverted;
-            userInputConverted = this.state.userInput.replace(/[ςερτυθιοπασδφγηξκλζχψωβνμ]/g, function(match){
+            userInputConverted = this.state.userInput.replace(/[ςεέρτυύθιίοόπαάσδφγηήξκλζχψωώβνμ]/g, function(match){
                 return elToEn[match]
             })
             console.log(userInputConverted)
