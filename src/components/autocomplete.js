@@ -259,8 +259,8 @@ class Autocomplete extends Component {
                                         defaultValue='en' 
                                         onChange={this.setLanguage}
                                     >
-                                        <Select.Option value="en">en</Select.Option>
-                                        <Select.Option value="el">el</Select.Option>
+                                        <Select.Option value="en">EN</Select.Option>
+                                        <Select.Option value="el">GR</Select.Option>
                                     </Select>
                                 </div>
                             </Col>
